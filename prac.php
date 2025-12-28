@@ -49,6 +49,15 @@ for ($i = 0; $i <= 9; $i++) {
 
 $numbersets = array(1, 2, 3, 4, 5, 6, 7);
 
+
+// $students = [
+//     'id1' => 'John',
+//     'id2' => 'Jane', 
+//     'id3' => 'Bob'
+// ];
+// foreach($students as $id => $name) {
+//     echo "ID: $id, Name: $name<br>";
+// }
 foreach ($numbersets as $key => $value) {
 
     echo "index", $key, "\t", "value:", $value, "\t";
@@ -95,6 +104,32 @@ else {
 
 
 
+
+
+
+// math class
+
+$mathprac=abs(-899);
+
+echo $mathprac;
+
+// conatant 
+// CASE SNSITIVE CONSTANTS
+
+define("NAME","shakti",true);
+
+
+echo NAME,"\t";
+
+const url="http://localhost:8080";
+
+echo url;
+
+// constants are gloabl in nature
+  $a=30;
+
+
+//   magic constants
 
 
 
