@@ -74,18 +74,68 @@ $users = [
 ];
 
 // Callback approach
-function sortByAge($a, $b) {
+function sortByAge($a, $b)
+{
     return $a['age'] <=> $b['age'];
 }
 usort($users, 'sortByAge');
 
 // Closure approach (more common)
-usort($users, function($a, $b) {
-// spaceship opetator
+usort($users, function ($a, $b) {
+    // spaceship opetator
     // <=>
+
+//     $a <=> $b returns:
+//   -1  if  $a < $b    (left is smaller)
+//    0  if  $a == $b   (both are equal)
+//    1  if  $a > $b    (left is bigger)
+
+    //     Spaceship Operator <=> - Simple Explanation
+    // What it Looks Like:
+    // <=> - It looks like a spaceship (or a Pac-Man!)
+
+    // What it Does:
+    // It compares two values and tells you which one is bigger or if they're equal.
     return $a['age'] <=> $b['age'];
 });
 
-$add=fn($a,$b)=>$a+$b;
+$add = fn($a, $b) => $a + $b;
 
-echo "addition",$add(3,4);
+echo "addition", $add(3, 4);
+
+// Arrow Functions Capture Variables by Value Automatically
+$y=2;
+$fn1=fn($a)=>$a+$b;
+
+$fn2=function($x)use($y){
+return $x+$y;
+};
+
+// string fucntions
+
+$name='shakti';
+
+// Hash the password (string)
+$hashedPassword = password_hash($name, PASSWORD_DEFAULT);
+
+echo "Original: $name\n";
+echo "Hashed: $hashedPassword\n";
+
+$userDate=date("Y-m-d H:i:s");
+
+echo $userDate,"\n";
+
+$dateWithMoth=date("d/m/y");
+echo $dateWithMoth,"\n";
+
+$dateWithMouthUser=date("d.M.Y/D");
+
+echo $dateWithMouthUser,"\n";
+
+
+$tempsetp=time();
+
+echo $tempsetp,"\n";
+
+echo (date("F d, Y h:i:s A",$tempsetp));
+
