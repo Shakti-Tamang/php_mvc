@@ -1,15 +1,15 @@
 <?php
 class Car{
-public $brand,$model,$year;
+public static $brand,$model,$year;
 
 function __construct($brand,$model,$year)
 {
- $this->brand=$brand;
- $this->model=$model;
- $this->year=$year;
+ Car::$brand=$brand;
+ Car::$model=$model;
+ Car::$year=$year;
 }
 public function displayDeatils(){
-echo $this->brand,"\t",$this->model,"\t",$this->year;
+echo Car::$brand,"\t",Car::$model,"\t",Car::$year;
 }
 
 }
